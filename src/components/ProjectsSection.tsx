@@ -1,58 +1,49 @@
 import { motion } from 'framer-motion'
 import ProjectCard from './ProjectCard'
-import aiTaskmanagerImg from '@/assets/project-ai-taskmanager.jpg'
-import cryptoDashboardImg from '@/assets/project-crypto-dashboard.jpg'
-import portfolioImg from '@/assets/project-3d-portfolio.jpg'
-import ecommerceImg from '@/assets/project-ecommerce.jpg'
-import mlClassifierImg from '@/assets/project-ml-classifier.jpg'
-import socialAnalyticsImg from '@/assets/project-social-analytics.jpg'
+import urlShortenerImg from '@/assets/project-url-shortener.jpg'
+import mazeGameImg from '@/assets/project-maze-game.jpg'
+import todoAppImg from '@/assets/project-todo-app.jpg'
+import calculatorAppImg from '@/assets/project-calculator-app.jpg'
+import ecommerceWebsiteImg from '@/assets/project-ecommerce-website.jpg'
 
 const projects = [
   {
-    title: "AI-Powered Task Manager",
-    description: "A modern task management application with AI-driven priority suggestions and smart categorization. Built with React, TypeScript, and integrates with OpenAI API.",
-    image: aiTaskmanagerImg,
-    techStack: ["React", "TypeScript", "Node.js", "OpenAI", "MongoDB"],
+    title: "URL Shortener",
+    description: "A URL shortening application built using HTML, CSS, JavaScript, Python(Flask), and MySQL. It allows users to shorten long URLs and provides a user-friendly interface for managing shortened links.",
+    image: urlShortenerImg,
+    techStack: ["HTML", "CSS", "JavaScript", "Python", "Flask", "MySQL"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "Cryptocurrency Dashboard",
-    description: "Real-time crypto trading dashboard with portfolio tracking, price alerts, and advanced charting. Features WebSocket connections for live data.",
-    image: cryptoDashboardImg,
-    techStack: ["Next.js", "WebSocket", "Chart.js", "Redux", "TailwindCSS"],
+    title: "Maze Game",
+    description: "A fun, interactive maze game built using only HTML, CSS, and JavaScript. This full JavaScript-based project allows users to navigate through a randomly generated maze and reach the exit.",
+    image: mazeGameImg,
+    techStack: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "3D Portfolio Website",
-    description: "Interactive 3D portfolio showcasing projects with Three.js animations, particle systems, and immersive user experience.",
-    image: portfolioImg,
-    techStack: ["Three.js", "React", "GSAP", "WebGL", "Blender"],
+    title: "To-Do List App",
+    description: "A simple and interactive To-Do List application built using React.js and TailwindCSS. It allows users to add, edit, and delete tasks, with persistent storage using browser local storage.",
+    image: todoAppImg,
+    techStack: ["React.js", "TailwindCSS", "Local Storage"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce solution with payment processing, inventory management, and admin dashboard. Scalable microservices architecture.",
-    image: ecommerceImg,
-    techStack: ["React", "Express.js", "PostgreSQL", "Stripe", "Docker"],
+    title: "Calculator App",
+    description: "A simple and responsive calculator built using React.js and TailwindCSS. It supports basic arithmetic operations, percentage calculations, and features a modern dark-themed UI.",
+    image: calculatorAppImg,
+    techStack: ["React.js", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "#"
   },
   {
-    title: "ML Image Classifier",
-    description: "Machine learning web app for image classification using TensorFlow.js. Real-time inference with 95% accuracy on custom dataset.",
-    image: mlClassifierImg,
-    techStack: ["TensorFlow.js", "Python", "Flask", "CNN", "OpenCV"],
-    demoUrl: "#",
-    githubUrl: "#"
-  },
-  {
-    title: "Social Media Analytics",
-    description: "Social media analytics dashboard with sentiment analysis, engagement tracking, and automated reporting for content creators.",
-    image: socialAnalyticsImg,
-    techStack: ["Vue.js", "D3.js", "Python", "NLP", "AWS"],
+    title: "E-Commerce Website",
+    description: "A modern and responsive e-commerce web application built using React.js, TypeScript, and TailwindCSS. This project provides a smooth shopping experience with an interactive UI and real-time cart functionality.",
+    image: ecommerceWebsiteImg,
+    techStack: ["React.js", "TypeScript", "TailwindCSS"],
     demoUrl: "#",
     githubUrl: "#"
   }
