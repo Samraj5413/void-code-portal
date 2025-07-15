@@ -4,44 +4,20 @@ import { Calendar, MapPin, Building2 } from 'lucide-react'
 
 const experiences = [
   {
-    company: "TechCorp Solutions",
-    role: "Full Stack Developer Intern",
-    duration: "Jun 2024 - Aug 2024",
-    location: "San Francisco, CA",
-    description: "Developed and maintained web applications using React, Node.js, and PostgreSQL. Collaborated with senior developers on microservices architecture.",
+    company: "BASE Automation Technologies",
+    role: "Intern Trainee",
+    duration: "Aug - Sep 2024",
+    location: "Chennai, India",
+    description: "Completed an internship at Base Automation Technologies, gaining hands-on exposure to industrial automation systems, control panels, and real-time PLC-HMI integration.",
     achievements: [
-      "Built responsive dashboard reducing load time by 40%",
-      "Implemented authentication system serving 10k+ users",
-      "Optimized database queries improving performance by 60%"
+      "Assisted in the assembly and testing of control panels used in automated systems.",
+      "Gained hands-on experience working with Human Machine Interfaces (HMIs) for system monitoring.",
+      "Supported the integration of relays and PLCs into industrial automation solutions.",
+      "Collaborated with the team to troubleshoot and ensure the smooth operation of control systems."
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"]
+    
   },
-  {
-    company: "StartupXYZ",
-    role: "Frontend Developer Intern",
-    duration: "Jan 2024 - May 2024",
-    location: "Remote",
-    description: "Led frontend development for a B2B SaaS platform. Worked closely with designers to implement pixel-perfect UI components and ensure excellent UX.",
-    achievements: [
-      "Redesigned user interface increasing user engagement by 35%",
-      "Developed reusable component library used across 5+ projects",
-      "Integrated third-party APIs for payment processing"
-    ],
-    technologies: ["Vue.js", "TypeScript", "SCSS", "Figma", "Jest"]
-  },
-  {
-    company: "Innovation Labs",
-    role: "Software Engineer Intern",
-    duration: "Jun 2023 - Aug 2023",
-    location: "Austin, TX",
-    description: "Worked on machine learning projects and data visualization tools. Contributed to open-source projects and participated in hackathons.",
-    achievements: [
-      "Developed ML model with 92% accuracy for image classification",
-      "Created data visualization dashboard for analytics team",
-      "Won 2nd place in company hackathon with AI chatbot"
-    ],
-    technologies: ["Python", "TensorFlow", "D3.js", "Flask", "MongoDB"]
-  }
+  
 ]
 
 export default function ExperienceSection() {
@@ -120,7 +96,7 @@ export default function ExperienceSection() {
                     </ul>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2">
+                  {/* <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, i) => (
                       <span 
                         key={i} 
@@ -129,7 +105,7 @@ export default function ExperienceSection() {
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </motion.div>

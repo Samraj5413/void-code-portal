@@ -5,31 +5,31 @@ const socialLinks = [
   {
     name: 'GitHub',
     icon: Github,
-    url: 'https://github.com',
+    url: 'https://github.com/Samraj5413',
     color: 'hover:text-foreground'
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'https://linkedin.com',
+    url: 'linkedin.com/in/sam-raj-69033a24a',
     color: 'hover:text-primary'
   },
   {
     name: 'Email',
     icon: Mail,
-    url: 'mailto:your.email@example.com',
+    url: 'mailto:samraj6083@gmail.com',
     color: 'hover:text-accent'
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com',
+    url: 'https://www.instagram.com/_.samraj.___?igsh=MW1vcWlqN2xmZjZocg==',
     color: 'hover:text-neon-pink'
   },
   {
     name: 'Twitter',
     icon: Twitter,
-    url: 'https://twitter.com',
+    url: 'https://x.com/Samraj5413',
     color: 'hover:text-secondary'
   }
 ]
@@ -105,7 +105,7 @@ export default function SocialLinks() {
           </p>
           
           <motion.a
-            href="mailto:your.email@example.com"
+            href="mailto:samraj6083@gmail.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-neon rounded-lg text-primary-foreground hover:shadow-glow-accent transition-all duration-300 font-semibold"

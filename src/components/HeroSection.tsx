@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 
 export default function HeroSection() {
   const [text, setText] = useState('')
-  const fullText = "Engineering ideas into code."
+  const fullText = "I love creating and i like to code."
   
   useEffect(() => {
     let index = 0
@@ -39,7 +39,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-cyber bg-clip-text text-transparent">
-            Your Name
+            Hi, I'm Sam!
           </h1>
         </motion.div>
         
@@ -61,12 +61,28 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Button variant="neon" size="lg" className="group">
+          <a
+          href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+          target="blank"
+          rel="noopener noreferrer"
+          >
+            <Button variant="neon" size="lg" className="group">
             <Download className="group-hover:animate-bounce-glow" />
             View Resume
           </Button>
+          </a>
           
-          <Button variant="glass" size="lg">
+          
+          <Button
+            variant="glass"
+            size="lg"
+            onClick={() => {
+              const section = document.getElementById('projects');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <ArrowDown className="animate-bounce" />
             Explore Work
           </Button>
@@ -80,8 +96,8 @@ export default function HeroSection() {
           className="mt-16 flex justify-center gap-8 md:gap-16"
         >
           {[
-            { label: "Projects", value: "15+" },
-            { label: "Experience", value: "2 Years" },
+            { label: "Projects", value: "5+" },
+            
             { label: "Technologies", value: "12+" }
           ].map((stat, index) => (
             <div key={index} className="text-center group">

@@ -52,7 +52,7 @@ export default function Navigation() {
             className="text-2xl font-bold bg-gradient-cyber bg-clip-text text-transparent cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            &lt;YourName /&gt;
+            &lt;SAMRAJ N /&gt;
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -108,10 +108,15 @@ export default function Navigation() {
             ))}
             
             <div className="px-4">
-              <Button variant="glow" size="sm" className="w-full">
+              <a href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+              target="blank"
+              rel="noopener noreferrer">
+                <Button variant="glow" size="sm" className="w-full">
                 <Download className="h-4 w-4" />
                 Resume
               </Button>
+              </a>
+              
             </div>
           </div>
         </motion.div>

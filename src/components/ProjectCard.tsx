@@ -79,10 +79,17 @@ export default function ProjectCard({
               </Button>
             )}
             {githubUrl && (
-              <Button variant="outline" size="sm" className="flex-1">
-                <Github className="h-4 w-4" />
-                Code
-              </Button>
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <Button variant="outline" size="sm" className="w-full">
+                  <Github className="h-4 w-4" />
+                  Code
+                </Button>
+              </a>
             )}
           </div>
         </CardContent>
