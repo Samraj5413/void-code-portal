@@ -8,11 +8,10 @@ import {
   SiPython, 
   SiMysql, 
   SiGit, 
-  SiAmazonwebservices, 
   SiFastapi, 
   SiFirebase 
 } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa';
+import { FaJava, FaAws } from 'react-icons/fa';
 
 const skills = [
   { name: 'React', category: 'Frontend', icon: SiReact, color: 'from-cyan-400 to-blue-600' },
@@ -24,7 +23,7 @@ const skills = [
   { name: 'Java', category: 'Language', icon: FaJava, color: 'from-red-400 to-orange-600' },
   { name: 'MySQL', category: 'Database', icon: SiMysql, color: 'from-blue-400 to-orange-500' },
   { name: 'Git', category: 'Version Control', icon: SiGit, color: 'from-red-500 to-orange-700' },
-  { name: 'AWS', category: 'Cloud', icon: SiAmazonwebservices, color: 'from-orange-400 to-yellow-500' },
+  { name: 'AWS', category: 'Cloud', icon: FaAws, color: 'from-orange-400 to-yellow-500' },
   { name: 'FastAPI', category: 'Framework', icon: SiFastapi, color: 'from-teal-400 to-green-600' },
   { name: 'Firebase', category: 'Cloud', icon: SiFirebase, color: 'from-yellow-400 to-red-500' },
 ];
