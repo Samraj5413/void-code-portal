@@ -29,7 +29,7 @@ export default function ProjectCard({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
       whileHover={{ y: -10 }}
-      className="group"
+      className="group magnetic-element"
     >
       <Card className="bg-card/40 backdrop-blur-md border-primary/20 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-glow-primary">
         <div className="relative overflow-hidden">
