@@ -126,5 +126,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    cursor: none; /* Hide default cursor globally */
+  }
+  
+  * {
+    cursor: none !important; /* Ensure all elements hide default cursor */
   }
 }
