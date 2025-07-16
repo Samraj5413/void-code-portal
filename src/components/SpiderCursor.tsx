@@ -144,7 +144,7 @@ const SpiderCursor = () => {
     <>
       {/* Custom cursor */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
           x: mousePosition.x - 12,
           y: mousePosition.y - 12,
@@ -161,19 +161,14 @@ const SpiderCursor = () => {
         {/* Main spider orb */}
         <motion.div
           className="w-6 h-6 rounded-full relative"
-          animate={{
+          style={{
+            background: 'radial-gradient(circle, hsl(194, 100%, 50%) 0%, hsl(120, 100%, 50%) 100%)',
             boxShadow: isClicking 
-              ? [
-                  "0 0 0 rgba(var(--cyber-blue), 0.8)",
-                  "0 0 20px rgba(var(--cyber-blue), 0.6)",
-                  "0 0 40px rgba(var(--cyber-blue), 0.4)",
-                  "0 0 0 rgba(var(--cyber-blue), 0.8)"
-                ]
-              : [
-                  "0 0 10px rgba(var(--neon-green), 0.6)",
-                  "0 0 20px rgba(var(--neon-green), 0.4)",
-                  "0 0 10px rgba(var(--neon-green), 0.6)"
-                ],
+              ? '0 0 20px hsl(194, 100%, 50%), 0 0 40px hsl(194, 100%, 50%), 0 0 60px hsl(194, 100%, 50%)'
+              : '0 0 10px hsl(120, 100%, 50%), 0 0 20px hsl(120, 100%, 50%)'
+          }}
+          animate={{
+            opacity: [0.8, 1, 0.8],
           }}
           transition={{
             duration: isClicking ? 0.3 : 2,
@@ -181,19 +176,27 @@ const SpiderCursor = () => {
             ease: "easeInOut"
           }}
         >
-          {/* Core orb */}
-          <div className="w-full h-full bg-gradient-to-br from-cyber-blue to-neon-green rounded-full" />
+          {/* Core bright center */}
+          <div 
+            className="absolute inset-1 rounded-full"
+            style={{
+              background: 'hsl(194, 100%, 70%)',
+              boxShadow: '0 0 10px hsl(194, 100%, 70%)'
+            }}
+          />
           
           {/* Spider legs */}
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-8 h-0.5 bg-gradient-to-r from-transparent via-cyber-blue to-transparent"
+              className="absolute w-8 h-0.5"
               style={{
                 transformOrigin: '0% 50%',
                 rotate: i * 45,
                 top: '50%',
                 left: '50%',
+                background: 'linear-gradient(to right, transparent, hsl(194, 100%, 50%), transparent)',
+                boxShadow: '0 0 5px hsl(194, 100%, 50%)'
               }}
               animate={{
                 scaleX: isClicking ? 1.5 : 1,
