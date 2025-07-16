@@ -31,9 +31,9 @@ const AboutSection = () => {
             <div className="relative bg-card/10 backdrop-blur-md border border-primary/20 rounded-2xl p-8 md:p-12">
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
                 I'm a tech enthusiast with a diverse interest in{' '}
-                <span className="text-accent font-semibold">cloud computing</span>,{' '}
+                <span className="text-accent font-semibold">web development</span>,{' '}
                 <span className="text-secondary font-semibold">cybersecurity</span>, and{' '}
-                <span className="text-primary font-semibold">web development</span>. 
+                <span className="text-primary font-semibold">cloud computing</span>. 
                 With a foundation in Electronics and Communication Engineering, I tackle challenges 
                 with a problem-solving mindset and a passion for innovation. I thrive in dynamic 
                 environments that encourage continuous learning and exploration, whether it's working 

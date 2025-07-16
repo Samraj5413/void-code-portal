@@ -73,9 +73,15 @@ export default function Navigation() {
               </motion.button>
             ))}
             
-            <Button variant="glow" size="sm">
-              <Download className="h-4 w-4" />
-              Resume
+            <Button asChild variant="glow" size="sm">
+              <a
+                href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="h-4 w-4" />
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -110,13 +116,14 @@ export default function Navigation() {
             ))}
             
             <div className="px-4">
-              <a href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
-              target="blank"
-              rel="noopener noreferrer">
-                <Button variant="glow" size="sm" className="w-full">
+              <a
+                href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-white hover:bg-primary/80 transition-all shadow-glow-primary"
+              >
                 <Download className="h-4 w-4" />
                 Resume
-              </Button>
               </a>
               
             </div>
