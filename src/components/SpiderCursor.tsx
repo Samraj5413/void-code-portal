@@ -146,158 +146,53 @@ const SpiderCursor = () => {
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
-          x: mousePosition.x - 12,
-          y: mousePosition.y - 12,
+          x: mousePosition.x - 4,
+          y: mousePosition.y - 4,
         }}
         animate={{
-          scale: isClicking ? 1.5 : 1,
+          scale: isClicking ? 1.2 : 1,
         }}
         transition={{
           type: "spring",
-          stiffness: 500,
-          damping: 28,
+          stiffness: 400,
+          damping: 25,
         }}
       >
-        {/* Main spider orb */}
+        {/* Clean minimal cursor */}
         <motion.div
-          className="w-6 h-6 rounded-full relative"
+          className="w-2 h-2 rounded-full border border-primary/60"
           style={{
-            background: 'radial-gradient(circle, hsl(194, 100%, 50%) 0%, hsl(120, 100%, 50%) 100%)',
-            boxShadow: isClicking 
-              ? '0 0 20px hsl(194, 100%, 50%), 0 0 40px hsl(194, 100%, 50%), 0 0 60px hsl(194, 100%, 50%)'
-              : '0 0 10px hsl(120, 100%, 50%), 0 0 20px hsl(120, 100%, 50%)'
+            background: 'hsl(var(--primary) / 0.9)',
+            boxShadow: hoveredElement 
+              ? '0 0 8px hsl(var(--primary) / 0.6)'
+              : '0 0 4px hsl(var(--primary) / 0.4)'
           }}
           animate={{
-            opacity: [0.8, 1, 0.8],
+            borderColor: hoveredElement ? 'hsl(var(--primary))' : 'hsl(var(--primary) / 0.6)',
           }}
           transition={{
-            duration: isClicking ? 0.3 : 2,
-            repeat: Infinity,
-            ease: "easeInOut"
+            duration: 0.2,
           }}
-        >
-          {/* Core bright center */}
-          <div 
-            className="absolute inset-1 rounded-full"
+        />
+        
+        {/* Outer ring for hover state */}
+        {hoveredElement && (
+          <motion.div
+            className="absolute inset-0 w-4 h-4 rounded-full border border-primary/30"
             style={{
-              background: 'hsl(194, 100%, 70%)',
-              boxShadow: '0 0 10px hsl(194, 100%, 70%)'
+              left: '-4px',
+              top: '-4px',
+            }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{
+              duration: 0.2,
+              ease: "easeOut"
             }}
           />
-          
-          {/* Spider legs */}
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-8 h-0.5"
-              style={{
-                transformOrigin: '0% 50%',
-                rotate: i * 45,
-                top: '50%',
-                left: '50%',
-                background: 'linear-gradient(to right, transparent, hsl(194, 100%, 50%), transparent)',
-                boxShadow: '0 0 5px hsl(194, 100%, 50%)'
-              }}
-              animate={{
-                scaleX: isClicking ? 1.5 : 1,
-                opacity: isClicking ? 1 : 0.7,
-              }}
-              transition={{
-                duration: 0.2,
-                ease: "easeOut"
-              }}
-            />
-          ))}
-        </motion.div>
+        )}
       </motion.div>
-
-      {/* Web lines */}
-      <AnimatePresence>
-        {webLines.map((line) => (
-          <motion.svg
-            key={line.id}
-            className="fixed top-0 left-0 pointer-events-none z-[9998] w-full h-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.path
-              d={`M ${line.startX} ${line.startY} Q ${(line.startX + line.endX) / 2} ${line.startY - 50} ${line.endX} ${line.endY}`}
-              stroke="rgba(var(--cyber-blue), 0.8)"
-              strokeWidth="2"
-              fill="none"
-              filter="drop-shadow(0 0 10px rgba(var(--cyber-blue), 0.6))"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            />
-          </motion.svg>
-        ))}
-      </AnimatePresence>
-
-      {/* Web splats */}
-      <AnimatePresence>
-        {webSplats.map((splat) => (
-          <motion.div
-            key={splat.id}
-            className="fixed pointer-events-none z-[9997]"
-            style={{
-              left: splat.x - 20,
-              top: splat.y - 20,
-            }}
-            initial={{ scale: 0, rotate: 0 }}
-            animate={{ 
-              scale: [0, 1.2, 1], 
-              rotate: [0, 180, 360],
-              opacity: [1, 1, 0] 
-            }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-          >
-            {/* Spider web splat */}
-            <svg width="40" height="40" viewBox="0 0 40 40">
-              <defs>
-                <radialGradient id="webGradient" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="rgba(var(--cyber-blue), 0.8)" />
-                  <stop offset="100%" stopColor="rgba(var(--neon-green), 0.4)" />
-                </radialGradient>
-              </defs>
-              
-              {/* Web strands */}
-              {[...Array(8)].map((_, i) => (
-                <motion.line
-                  key={i}
-                  x1="20"
-                  y1="20"
-                  x2={20 + 15 * Math.cos((i * Math.PI) / 4)}
-                  y2={20 + 15 * Math.sin((i * Math.PI) / 4)}
-                  stroke="url(#webGradient)"
-                  strokeWidth="1.5"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 0.2, delay: i * 0.05 }}
-                />
-              ))}
-              
-              {/* Concentric circles */}
-              {[...Array(3)].map((_, i) => (
-                <motion.circle
-                  key={i}
-                  cx="20"
-                  cy="20"
-                  r={5 + i * 5}
-                  fill="none"
-                  stroke="url(#webGradient)"
-                  strokeWidth="1"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 0.3, delay: 0.1 + i * 0.1 }}
-                />
-              ))}
-            </svg>
-          </motion.div>
-        ))}
-      </AnimatePresence>
     </>
   );
 };
