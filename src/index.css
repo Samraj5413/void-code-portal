@@ -48,17 +48,30 @@ All colors MUST be HSL.
     --cyber-blue: 194 100% 50%;
     --electric-purple: 280 100% 70%;
     --cyber-orange: 30 100% 60%;
-    
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-neon: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--neon-pink)));
-    --gradient-cyber: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--electric-purple)), hsl(var(--neon-pink)));
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--secondary))
+    );
+    --gradient-neon: linear-gradient(
+      90deg,
+      hsl(var(--accent)),
+      hsl(var(--neon-pink))
+    );
+    --gradient-cyber: linear-gradient(
+      45deg,
+      hsl(var(--primary)),
+      hsl(var(--electric-purple)),
+      hsl(var(--neon-pink))
+    );
+
     /* Glows */
     --glow-primary: 0 0 20px hsl(var(--primary) / 0.5);
     --glow-accent: 0 0 30px hsl(var(--accent) / 0.6);
     --glow-secondary: 0 0 25px hsl(var(--secondary) / 0.5);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -128,7 +141,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     cursor: none; /* Hide default cursor globally */
   }
-  
+
   * {
     cursor: none !important; /* Ensure all elements hide default cursor */
   }
