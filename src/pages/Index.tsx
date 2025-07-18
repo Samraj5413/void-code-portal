@@ -5,12 +5,10 @@ import SkillsSection from '@/components/SkillsSection'
 import ProjectsSection from '@/components/ProjectsSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import SocialLinks from '@/components/SocialLinks'
-import SpiderCursor from '@/components/SpiderCursor'
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SpiderCursor />
       <Navigation />
       
       <main>
