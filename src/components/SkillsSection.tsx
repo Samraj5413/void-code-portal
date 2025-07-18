@@ -17,7 +17,7 @@ import { FaJava, FaAws } from 'react-icons/fa';
 
 const skills = [
   { name: 'React', category: 'Frontend', icon: SiReact },
-  { name: 'TypeScript', category: 'Language', icon: SiTypescript },
+  // { name: 'TypeScript', category: 'Language', icon: SiTypescript },
   { name: 'JavaScript', category: 'Language', icon: SiJavascript },
   { name: 'TailwindCSS', category: 'Styling', icon: SiTailwindcss },
   { name: 'Node.js', category: 'Backend', icon: SiNodedotjs },
@@ -26,7 +26,7 @@ const skills = [
   { name: 'Express.js', category: 'Framework', icon: SiExpress },
   { name: 'FastAPI', category: 'Framework', icon: SiFastapi },
   { name: 'MySQL', category: 'Database', icon: SiMysql },
-  { name: 'MongoDB', category: 'Database', icon: SiMongodb },
+  // { name: 'MongoDB', category: 'Database', icon: SiMongodb },
   { name: 'Firebase', category: 'Cloud', icon: SiFirebase },
   { name: 'AWS', category: 'Cloud', icon: FaAws },
   { name: 'Git', category: 'Version Control', icon: SiGit },
