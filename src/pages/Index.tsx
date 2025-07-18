@@ -41,7 +41,7 @@ const Index = () => {
       <footer className="py-8 px-6 border-t border-primary/20 bg-card/20 backdrop-blur-md">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 Your Name. Built with React, Three.js, and lots of ☕
+            © 2024 SAMRAJ N. Built with React, Three.js, and lots of ☕
           </p>
         </div>
       </footer>
