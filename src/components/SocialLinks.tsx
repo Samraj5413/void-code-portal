@@ -11,7 +11,7 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'linkedin.com/in/sam-raj-69033a24a',
+    url: 'https://www.linkedin.com/in/sam-raj-69033a24a/',
     color: 'hover:text-primary'
   },
   {
@@ -23,7 +23,7 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://www.instagram.com/_.samraj.___?igsh=MW1vcWlqN2xmZjZocg==',
+    url: 'https://www.instagram.com/its_sam._____?igsh=MW1vcWlqN2xmZjZocg==',
     color: 'hover:text-neon-pink'
   },
   {
