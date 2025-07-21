@@ -75,7 +75,7 @@ export default function Navigation() {
             
             <Button asChild variant="glow" size="sm">
               <a
-                href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xl3Xb6O2O943iHeJS_5JqKKBUhmS8Q7S/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -117,7 +117,7 @@ export default function Navigation() {
             
             <div className="px-4">
               <a
-                href="https://drive.google.com/file/d/1CFUERIHl8jljK62rooOTPWRFo61W3QdZ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xl3Xb6O2O943iHeJS_5JqKKBUhmS8Q7S/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-white hover:bg-primary/80 transition-all shadow-glow-primary"
