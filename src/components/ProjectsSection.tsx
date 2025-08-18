@@ -5,6 +5,7 @@ import mazeGameImg from '@/assets/project-maze-game.jpg'
 import todoAppImg from '@/assets/project-todo-app.jpg'
 import calculatorAppImg from '@/assets/project-calculator-app.jpg'
 import ecommerceWebsiteImg from '@/assets/project-ecommerce-website.jpg'
+import trelloCloneImg from '@/assets/project-trello-clone.jpg'
 
 const projects = [
   {
@@ -46,6 +47,14 @@ const projects = [
     techStack: ["React.js", "TailwindCSS"],
     // demoUrl: "#",
     githubUrl: "https://github.com/Samraj5413/E-Commerce-Project"
+  },
+  {
+    title: "Trello Clone App",
+    description: "A Trello-style task management application built with Next.js, Supabase, and Clerk. Features real-time collaboration, drag-and-drop functionality, authentication, billing integration, and advanced filtering capabilities.",
+    image: trelloCloneImg,
+    techStack: ["Next.js", "Supabase", "Clerk", "dnd-kit", "TailwindCSS", "TypeScript"],
+    // demoUrl: "#",
+    githubUrl: "#"
   }
 ]
 
