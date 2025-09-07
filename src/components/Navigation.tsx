@@ -1,37 +1,37 @@
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Menu, X, Download } from 'lucide-react'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Download } from "lucide-react";
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' }
-]
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMobileMenuOpen(false)
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
     }
-  }
+  };
 
   return (
     <motion.nav
@@ -40,9 +40,10 @@ export default function Navigation() {
       transition={{ duration: 0.8 }}
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${isScrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-primary/20 shadow-glow-primary' 
-          : 'bg-transparent'
+        ${
+          isScrolled
+            ? "bg-background/80 backdrop-blur-md border-b border-primary/20 shadow-glow-primary"
+            : "bg-transparent"
         }
       `}
     >
@@ -52,7 +53,7 @@ export default function Navigation() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-cyber bg-clip-text text-transparent cursor-pointer"
-            onClick={() => scrollToSection('#home')}
+            onClick={() => scrollToSection("#home")}
           >
             &lt;SAMRAJ N /&gt;
           </motion.div>
@@ -72,10 +73,10 @@ export default function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </motion.button>
             ))}
-            
+
             <Button asChild variant="glow" size="sm">
               <a
-                href="https://drive.google.com/file/d/1xl3Xb6O2O943iHeJS_5JqKKBUhmS8Q7S/view?usp=sharing"
+                href="https://drive.google.com/file/d/1k9eicUqYxV2aUChQZhmZwLT_uiC3JK_2/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -90,16 +91,20 @@ export default function Navigation() {
             className="md:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         <motion.div
           initial={false}
-          animate={{ 
-            height: isMobileMenuOpen ? 'auto' : 0,
-            opacity: isMobileMenuOpen ? 1 : 0
+          animate={{
+            height: isMobileMenuOpen ? "auto" : 0,
+            opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden bg-background/95 backdrop-blur-md border-t border-primary/20"
@@ -114,7 +119,7 @@ export default function Navigation() {
                 {item.name}
               </button>
             ))}
-            
+
             <div className="px-4">
               <a
                 href="https://drive.google.com/file/d/1xl3Xb6O2O943iHeJS_5JqKKBUhmS8Q7S/view?usp=sharing"
@@ -125,11 +130,10 @@ export default function Navigation() {
                 <Download className="h-4 w-4" />
                 Resume
               </a>
-              
             </div>
           </div>
         </motion.div>
       </div>
     </motion.nav>
-  )
+  );
 }
