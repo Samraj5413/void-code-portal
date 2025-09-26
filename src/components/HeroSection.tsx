@@ -62,7 +62,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
-            href="https://drive.google.com/file/d/1u_ypsRn4Lp_hoeXwSFjMlA4k4WK19sK0/view?usp=sharing"
+            href="https://drive.google.com/file/d/1u_ypsRn4Lp_hoeXwSFjMlA4k4WK19sK0/view?usp=drive_link"
             target="blank"
             rel="noopener noreferrer"
           >
