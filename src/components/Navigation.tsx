@@ -76,7 +76,8 @@ export default function Navigation() {
 
             <Button asChild variant="glow" size="sm">
               <a
-                href="https://drive.google.com/file/d/1u_ypsRn4Lp_hoeXwSFjMlA4k4WK19sK0/view?usp=drive_link"
+                // href="https://drive.google.com/file/d/1u_ypsRn4Lp_hoeXwSFjMlA4k4WK19sK0/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1uHteqmynJSaouqrF8EWoxE8vznFxkVp_/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
